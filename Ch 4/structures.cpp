@@ -22,7 +22,9 @@ int main()
 	Cheetos myCheetos;
 
 	cout << "\nEnter the type of Cheetos: ";
-	cin.getline( myCheetos.name, 20);
+	cin.getline(myCheetos.name, 20);
+
+	cout << "Passed" << endl;
 
 	cout << "\nHow many ounces is this bag (1.3, 2.4, 5.9)?" << endl;
 	cin >> myCheetos.volume;
@@ -30,7 +32,17 @@ int main()
 	cout << "\nHow much does this bag of Cheetos cost? (#s only)" << endl;
 	cin >> myCheetos.price;
 
+	cout << "An alternative assignment method: " << endl;
+	Cheetos myCheetos2 = 
+	{
+		"Lime Cheetos",
+		2.4,
+		5.99
+	};
+
 	display(myCheetos);
+	cout << "Alternative Method: " << endl;
+	display(myCheetos2);
 
 	return 0;
 }

@@ -2,7 +2,6 @@
 //Structures practice and basic functionalities
 
 #include <iostream>
-#include <cstring>
 
 using namespace std;
 

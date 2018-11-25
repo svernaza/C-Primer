@@ -34,5 +34,31 @@ int main()
 	delete pNum;
 	cout << "Done!" << endl;
 
+	//memory allocation of dynamically allocated array
+
+	char temp[100];
+	char * name;
+
+	cout << "Enter your full name\n";
+	cin.get(temp, 100, '\n');;
+	cin.ignore(100,'\n');
+
+	name = new char[strlen(temp) +1];
+	strcpy(name, temp);
+
+	cout << "Your name is: " << name << endl;
+
+//pointer arithmetic comparisons
+
+	cout << "What's the difference between array[i] and *(array + i)?\n";
+	cout << "This program will now display the same memory address using";
+	cout << " using different pointer methods\n";
+
+	cout << "array[3] method: " << name[1] << endl;
+	cout << name[2] << endl;
+	cout << name[3] << endl;
+	cout << "*(array + 3) method: "  << *(name + 3) << endl;
+
+	delete [] name;
 	return 0;
 }
